@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,user-scalable=no">
+    <title>Tirador de Dados</title>
+    <link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+    <link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
+          href="lib/tau/wearable/theme/default/tau.circle.min.css">
+    <script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+    <!-- load theme file for your application -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/diceRoller.js"></script>
+</head>
+<body>
+<div class="ui-page ui-page-active" id="dicesPage">
+    <header class="ui-header">
+        <div id="decreaseDices" class="decrease"><i class="left-arrow"></i><span class="decreaseText">-</span></div>
+        <h2 class="ui-title">Dados</h2>
+        <div id="increaseDices" class="increase"><span class="increaseText">+</span><i class="right-arrow"></i></div>
+    </header>
+    <div class="ui-content content-padding">
+        <p>&iquest;Cu&aacute;ntos dados quieres tirar?</p>
+        <p id="dices">dados</p>
+    </div>
+    <footer class="ui-footer ui-bottom-button">
+        <button id="setDices" class="ui-btn">Ya</button>
+    </footer>
+</div>
+<div class="ui-page" id="sidesPage">
+    <header class="ui-header">
+        <i class="left-arrow"></i><span class="decrease">4</span>
+        <h2 class="ui-title">Caras</h2>
+        <span class="increase">8</span><i class="right-arrow"></i>
+    </header>
+    <div class="ui-content content-padding">
+        <p>¿De cuántas caras?</p>
+        <p id="sides">caras</p>
+    </div>
+    <footer class="ui-footer ui-bottom-button">
+        <button id="setSides" class="ui-btn">Tirar</button>
+    </footer>
+</div>
+<div class="ui-page" id="resultsPage">
+    <header class="ui-header">
+        <h2 class="ui-title">Resultados</h2>
+    </header>
+    <div class="ui-content content-padding">
+
+    </div>
+</div>
+</body>
+</html>
