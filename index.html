@@ -15,9 +15,11 @@
 <body>
 <div class="ui-page ui-page-active" id="dicesPage">
     <header class="ui-header">
-        <div id="decreaseDices" class="decrease"><i class="left-arrow"></i><span class="decreaseText">-</span></div>
+        <div id="decreaseDices" class="decrease"><i class="left-arrow"></i><span id="decreaseDicesText"
+                                                                                 class="decreaseText">-</span></div>
         <h2 class="ui-title">Dados</h2>
-        <div id="increaseDices" class="increase"><span class="increaseText">+</span><i class="right-arrow"></i></div>
+        <div id="increaseDices" class="increase"><span id="increaseDicesText" class="increaseText">+</span><i
+                class="right-arrow"></i></div>
     </header>
     <div class="ui-content content-padding">
         <p>&iquest;Cu&aacute;ntos dados quieres tirar?</p>
@@ -29,12 +31,14 @@
 </div>
 <div class="ui-page" id="sidesPage">
     <header class="ui-header">
-        <i class="left-arrow"></i><span class="decrease">4</span>
+        <div id="decreaseSides" class="decrease"><i class="left-arrow"></i><span id="decreaseSidesText"
+                                                                                 class="decreaseText">4</span></div>
         <h2 class="ui-title">Caras</h2>
-        <span class="increase">8</span><i class="right-arrow"></i>
+        <div id="increaseSides" class="increase"><span id="increaseSidesText" class="increaseText">8</span><i
+                class="right-arrow"></i></div>
     </header>
     <div class="ui-content content-padding">
-        <p>¿De cuántas caras?</p>
+        <p>&iquest;De cu&aacute;ntas caras?</p>
         <p id="sides">caras</p>
     </div>
     <footer class="ui-footer ui-bottom-button">
