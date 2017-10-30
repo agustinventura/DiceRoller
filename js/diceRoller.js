@@ -1,5 +1,6 @@
 var dices = 1;
 var sides = 6;
+var results = [];
 
 function init() {
     $("#dices").text(dices);
@@ -140,9 +141,25 @@ function dicesSet() {
         increaseSides();
     });
     $("#sides").text(sides);
+    $("#setSides").click(function () {
+        sidesSet();
+    });
     tau.changePage("#sidesPage");
 }
 
+function sidesSet() {
+    $(".ui-title").width("100%");
+    roll();
+    $("#results").text(results);
+    tau.changePage("#resultsPage");
+}
+
+function roll() {
+    for (i = 0; i < dices; i++) {
+        var randomNumber = Math.floor(Math.random() * sides) + 1;
+        results.push(randomNumber);
+    }
+}
 $(document).ready(function () {
     init();
 });
