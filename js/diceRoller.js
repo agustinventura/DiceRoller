@@ -155,6 +155,7 @@ function sidesSet() {
 }
 
 function roll() {
+    results = [];
     for (i = 0; i < dices; i++) {
         var randomNumber = Math.floor(Math.random() * sides) + 1;
         results.push(randomNumber);
