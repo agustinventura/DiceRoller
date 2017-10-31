@@ -150,7 +150,9 @@ function dicesSet() {
 function sidesSet() {
     $(".ui-title").width("100%");
     roll();
-    $("#results").text(results);
+    for (i = 0; i < results.length; i++) {
+        $(".ui-listview").append("<li>" + results[i] + "</li>");
+    }
     tau.changePage("#resultsPage");
 }
 
