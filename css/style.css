@@ -1,56 +1,46 @@
-/* Colors from zen master II theme: https://color.adobe.com/es/zen-master-II-color-theme-9738414
-* dark-blue: #5D7370
-* light-blue: #7FA6A1
-* dark-green: #B8D9B8
-* light-green: #D6EDBD
-* cream: #FFF5BC
+/* Colors from Blue and Orange theme: https://color.adobe.com/es/Corporate-Orange-Blue-color-theme-7978150
+* dark-blue: #304269
+* light-blue: #91BED4
+* dark-grey: #D9E8F5
+* white: #FFFFFF
+* orange: #F26101
 */
 .ui-content {
-    background-color: #FFF5BC;
+    background-color: #FFFFFF;
 }
 
 .ui-header {
-    background-color: #5D7370;
-    color: #D6EDBD;
+    background-color: #304269;
+    color: #F26101;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .ui-header .ui-title {
-    color: #D6EDBD;
-    width: 60%;
+    color: #F26101;
 }
 
 .ui-btn {
-    background-color: #7FA6A1;
-    color: #D6EDBD;
+    background-color: #91BED4;
+    color: #FFFFFF;
 }
 
 a.ui-btn:active:hover,
 .ui-btn:enabled:active:hover {
-    background-color: #5D7370;
+    background-color: #304269;
 }
 
 .ui-btn:enabled:focus {
-    background-color: #5D7370;
+    background-color: #304269;
 }
 
 body {
-    color: #5D7370;
+    color: #304269;
     text-align: center;
 }
 
-hr {
-    height: 9px;
-    width: 80%;
-    color: #D6EDBD;
-    background: #D6EDBD;
-    font-size: 0;
-    border: 0;
-}
-
 i {
-    border: solid #D6EDBD;;
+    border: solid #F26101;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -78,10 +68,9 @@ i {
     float: right;
 }
 
-.increase {
-    width: 20%
-}
-
-.decrease {
-    width: 20%
+.ui-listview li {
+    background: #D9E8F5;
+    border: 0;
+    margin: 10px 0 10px 0;
+    color: #F26101;
 }
