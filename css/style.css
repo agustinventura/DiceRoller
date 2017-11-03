@@ -14,10 +14,41 @@
     color: #F26101;
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 .ui-header .ui-title {
     color: #F26101;
+    margin: 0;
+}
+
+i {
+    border: solid #F26101;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right-arrow {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    margin: 0px;
+}
+
+.left-arrow {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    margin: 0px;
+}
+
+.increaseText {
+    font-size: x-large;
+    float: left;
+}
+
+.decreaseText {
+    font-size: x-large;
+    float: right;
 }
 
 .ui-btn {
@@ -37,35 +68,6 @@ a.ui-btn:active:hover,
 body {
     color: #304269;
     text-align: center;
-}
-
-i {
-    border: solid #F26101;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-}
-
-.right-arrow {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    margin: 25px 25px 25px 0px;
-}
-
-.left-arrow {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    margin: 25px 0px 25px 25px;
-}
-
-.increaseText {
-    font-size: x-large;
-    float: left;
-}
-
-.decreaseText {
-    font-size: x-large;
-    float: right;
 }
 
 .ui-listview li {
