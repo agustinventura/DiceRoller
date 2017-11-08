@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://www.digitalsingular.com/DiceRoller" version="1.0.0" viewmodes="maximized">
-    <tizen:application id="AswOwfOjyn.DiceRoller" package="AswOwfOjyn" required_version="2.3.2"/>
+<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/DiceRoller" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="Pb8g35Tqoq.DiceRoller" package="Pb8g35Tqoq" required_version="2.3.2"/>
     <content src="index.html"/>
     <feature name="http://tizen.org/feature/screen.size.normal"/>
     <icon src="icon.png"/>

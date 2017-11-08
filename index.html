@@ -1,70 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width,user-scalable=no">
-    <title>Tirador de Dados</title>
-    <link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
-    <link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
-          href="lib/tau/wearable/theme/default/tau.circle.min.css">
-    <script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
-    <!-- load theme file for your application -->
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/diceRoller.js"></script>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<title>Temporizador Tabata</title>
+<link rel="stylesheet" href="lib/tau/wearable/theme/default/tau.min.css">
+<link rel="stylesheet" media="all and (-tizen-geometric-shape: circle)"
+	href="lib/tau/wearable/theme/default/tau.circle.min.css">
+<script type="text/javascript" src="lib/tau/wearable/js/tau.min.js"></script>
+<!-- load theme file for your application -->
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/diceRoller.js"></script>
 </head>
 <body>
-<div class="ui-page ui-page-active" id="dicesPage">
-    <header class="ui-header">
-        <div id="decreaseDices" class="decrease"><i class="left-arrow"></i><span id="decreaseDicesText"
-                                                                                 class="decreaseText">-</span></div>
-        <h2 class="ui-title">Dados</h2>
-        <div id="increaseDices" class="increase"><span id="increaseDicesText" class="increaseText">+</span><i
-                class="right-arrow"></i></div>
-    </header>
-    <div class="ui-content content-padding">
-        <p>&iquest;Cu&aacute;ntos dados quieres tirar?</p>
-        <p id="dices">dados</p>
-    </div>
-    <footer class="ui-footer ui-bottom-button">
-        <button id="setDices" class="ui-btn">Si</button>
-    </footer>
-</div>
-<div class="ui-page" id="sidesPage">
-    <header class="ui-header">
-        <div id="decreaseSides" class="decrease"><i class="left-arrow"></i><span id="decreaseSidesText"
-                                                                                 class="decreaseText">4</span></div>
-        <h2 class="ui-title">Caras</h2>
-        <div id="increaseSides" class="increase"><span id="increaseSidesText" class="increaseText">8</span><i
-                class="right-arrow"></i></div>
-    </header>
-    <div class="ui-content content-padding">
-        <p>&iquest;De cu&aacute;ntas caras?</p>
-        <p id="sides">caras</p>
-    </div>
-    <footer class="ui-footer ui-bottom-button">
-        <button id="setSides" class="ui-btn">Tirar</button>
-    </footer>
-</div>
-<div class="ui-page" id="resultsPage">
-    <header class="ui-header">
-        <h2 class="ui-title">Resultados</h2>
-    </header>
-    <div class="ui-content content-padding">
-        <script type="text/javascript" src="js/circle-helper.js"></script>
-        <ul class="ui-listview">
-        </ul>
-    </div>
-    <footer class="ui-footer ui-bottom-button">
-        <button id="menu" class="ui-btn">Men&uacute;</button>
-    </footer>
-</div>
-<div id="menuPopup" class="ui-popup">
-    <div class="ui-popup-header">Men&uacute;</div>
-    <div class="ui-popup-content">&iquest;Quieres volver a tirar o ir al principio?</div>
-    <div class="ui-popup-footer ui-grid-col-2 ui-side-button">
-        <button id="rollAgain" class="ui-btn btn-icon-cancel"></button>
-        <button id="beginning" class="ui-btn btn-icon-ok"></button>
-    </div>
-</div>
+	<div class="ui-page ui-page-active" id="dicesPage">
+		<header class="ui-header">
+			<div id="decreaseDices" class="decrease">&lt;</div>
+			<div id="increaseDices" class="increase">&gt;</div>
+			<h2 class="ui-title">Dados</h2>
+		</header>
+		<div class="ui-content content-padding">
+			<p class="description">&iquest;Cu&aacute;ntos dados quieres
+				tirar?</p>
+			<p id="dices" class="modifiable">dados</p>
+		</div>
+		<footer class="ui-footer ui-bottom-button">
+			<button id="setDices" class="ui-btn">Si</button>
+		</footer>
+	</div>
+	<div class="ui-page" id="sidesPage">
+		<header class="ui-header">
+			<div id="decreaseSides" class="decrease">
+				&lt;<span id="decreaseSidesText" class="decreaseText">4</span>
+			</div>
+			<div id="increaseSides" class="increase">
+				<span id="increaseSidesText" class="increaseText">8</span>&gt;
+			</div>
+			<h2 class="ui-title">Caras</h2>
+		</header>
+		<div class="ui-content content-padding">
+			<p class="description">&iquest;De cu&aacute;ntas caras?</p>
+			<p id="sides" class="modifiable">caras</p>
+		</div>
+		<footer class="ui-footer ui-bottom-button">
+			<button id="setSides" class="ui-btn">Tirar</button>
+		</footer>
+	</div>
+	<div class="ui-page" id="resultsPage">
+		<header class="ui-header">
+			<h2 class="ui-title">Resultados</h2>
+		</header>
+		<div class="ui-content content-padding">
+			<script type="text/javascript" src="js/circle-helper.js"></script>
+			<ul class="ui-listview">
+			</ul>
+		</div>
+		<footer class="ui-footer ui-bottom-button">
+			<button id="menu" class="ui-btn">Men&uacute;</button>
+		</footer>
+	</div>
+	<div id="menuPopup" class="ui-popup">
+		<div class="ui-popup-header">Men&uacute;</div>
+		<div class="ui-popup-content">&iquest;Quieres volver a tirar o
+			ir al principio?</div>
+		<div class="ui-popup-footer ui-grid-col-2 ui-side-button">
+			<button id="rollAgain" class="ui-btn btn-icon-cancel"></button>
+			<button id="beginning" class="ui-btn btn-icon-ok"></button>
+		</div>
+	</div>
 </body>
 </html>

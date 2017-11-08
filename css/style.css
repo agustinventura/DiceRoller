@@ -6,73 +6,117 @@
 * orange: #F26101
 */
 .ui-content {
-    background-color: #FFFFFF;
+    background-color: #F1F8F8;
 }
 
 .ui-header {
-    background-color: #304269;
-    color: #F26101;
-    display: flex;
-    justify-content: center;
-    margin: 0;
+	color: #F1F8F8;
+    background-color: #7F9070;
+    width: 100%;
 }
 
 .ui-header .ui-title {
-    color: #F26101;
+    color: #F1F8F8;
     margin: 0;
+    font-size: 35px;
 }
 
-i {
-    border: solid #F26101;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-}
-
-.right-arrow {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    margin: 0px;
-}
-
-.left-arrow {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    margin: 0px;
-}
-
-.increaseText {
-    font-size: x-large;
-    float: left;
-}
-
-.decreaseText {
-    font-size: x-large;
+.increase {
+	padding-right: 50px;
+    padding-top: 50px;
     float: right;
+    font-size: 30px;
+}
+
+.decrease {
+	padding-left: 50px;
+    padding-top: 50px;
+    float: left;
+    font-size: 30px;
+}
+
+.description {
+	margin: 0;	
+}
+
+.modifiable {
+	margin: 0.3em 0 0 0;
+	font-weight: bold;	
 }
 
 .ui-btn {
-    background-color: #91BED4;
-    color: #FFFFFF;
+    background-color: #EF003D;
+    color: #F1F8F8;
+    font-weight: bold;
 }
 
 a.ui-btn:active:hover,
 .ui-btn:enabled:active:hover {
-    background-color: #304269;
+    background-color: #D7073C
+}
+
+.ui-page .ui-footer.ui-bottom-button .ui-btn {
+	background-color: #EF003D;
 }
 
 .ui-btn:enabled:focus {
-    background-color: #304269;
+    background-color: #D7073C;
+}
+
+.ui-popup {
+    border: 3px solid #EF003D;
+}
+
+.ui-popup .ui-popup-header {
+    background-color: #7F9070;
+    color: #F1F8F8;
+}
+
+.ui-popup .ui-popup-content {
+    background-color: #F1F8F8;
+    font-weight: bolder;
+    color: #7F9070;
+    padding-top: 60px;
+}
+
+.ui-popup.ui-scroll-on:not(.ui-ctxpopup):not(.ui-popup-toast) .ui-popup-header+.ui-popup-content {
+	padding: 30px 64px 100px 64px;
+}
+
+.ui-popup .ui-popup-footer.ui-side-button .ui-btn:nth-child(n) {
+	background-color: #EF003D;
+}
+
+.ui-popup .ui-popup-footer.ui-side-button .ui-btn:nth-child(n):active {
+	background-color: #D7073C;
+}
+
+.ui-popup .ui-popup-footer.ui-side-button .ui-btn:nth-child(n)::after {
+    background-color: #D7073C;
+    -webkit-transition: opacity 250ms;
+    -moz-transition: opacity 250ms;
+    -o-transition: opacity 250ms;
+    -ms-transition: opacity 250ms;
+    transition: opacity 250ms;
+    opacity: 0;
+    z-index: -1;
+}
+
+.btn-icon-cancel {
+    background: url(../img/cancel.png) no-repeat 50% 50%;
+}
+
+.btn-icon-ok {
+    background: url(../img/ok.png) no-repeat 50% 50%;
 }
 
 body {
-    color: #304269;
+    color: #7F9070;
     text-align: center;
 }
 
 .ui-listview li {
-    background: #D9E8F5;
-    border: 0;
-    margin: 10px 0 10px 0;
-    color: #F26101;
+	color: #7F9070;
+	margin: 0;
+	font-weight: bold;
 }

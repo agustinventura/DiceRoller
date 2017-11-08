@@ -15,12 +15,40 @@ function init() {
     $("#increaseDices").click(function () {
         increaseDices();
     });
+    $("#decreaseSides").click(function () {
+        decreaseSides();
+    });
+    $("#increaseSides").click(function () {
+        increaseSides();
+    });
+    $("#setSides").click(function () {
+        sidesSet();
+    });
+    $("#rollAgain").click(function () {
+        rollAgain();
+    });
+    $("#beginning").click(function () {
+        goDices();
+    });
     document.addEventListener('rotarydetent', function (ev) {
         dicesRotaryControl(ev);
     });
     $("#menu").click(function () {
         showMenu();
     });
+    window.addEventListener( 'tizenhwkey', function( ev ) {
+		if( ev.keyName === "back" ) {
+			var activePageId = tau.activePage.id;
+			if( activePageId === "dicesPage" ) {
+				try {
+					tizen.application.getCurrentApplication().exit();
+				} catch (ignore) {
+				}
+			} else {
+				window.history.back();
+			}
+		}
+	} );
 }
 
 function dicesRotaryControl(ev) {
@@ -137,21 +165,11 @@ function dicesSet() {
     document.addEventListener('rotarydetent', function (ev) {
         sidesRotaryControl(ev);
     });
-    $("#decreaseSides").click(function () {
-        decreaseSides();
-    });
-    $("#increaseSides").click(function () {
-        increaseSides();
-    });
     $("#sides").text(sides);
-    $("#setSides").click(function () {
-        sidesSet();
-    });
     tau.changePage("#sidesPage");
 }
 
 function sidesSet() {
-    $(".ui-title").width("100%");
     roll();
     showThrows();
     tau.changePage("#resultsPage");
@@ -166,6 +184,7 @@ function roll() {
 }
 
 function showThrows() {
+	$(".ui-listview").empty();
     for (i = 0; i < results.length; i++) {
         $(".ui-listview").append("<li>" + results[i] + "</li>");
     }
@@ -186,12 +205,6 @@ function goDices() {
 }
 
 function showMenu() {
-    $("#rollAgain").click(function () {
-        rollAgain();
-    });
-    $("#beginning").click(function () {
-        goDices();
-    });
     tau.openPopup("#menuPopup");
 }
 
