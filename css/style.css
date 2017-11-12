@@ -1,22 +1,22 @@
-/* Colors from Blue and Orange theme: https://color.adobe.com/es/Corporate-Orange-Blue-color-theme-7978150
-* dark-blue: #304269
-* light-blue: #91BED4
-* dark-grey: #D9E8F5
-* white: #FFFFFF
-* orange: #F26101
+/* Colors from Flat UI theme: https://color.adobe.com/Flat-UI-color-theme-2469224/
+* blue: #2C3E50
+* red: #E74C3C
+* grey: #ECF0F1
+* light-blue: #3498DB
+* dark-blue: #2980B9
 */
 .ui-content {
-    background-color: #F1F8F8;
+    background-color: #ECF0F1;
 }
 
 .ui-header {
-	color: #F1F8F8;
-    background-color: #7F9070;
+	color: #ECF0F1;
+    background-color: #2C3E50;
     width: 100%;
 }
 
 .ui-header .ui-title {
-    color: #F1F8F8;
+    color: #ECF0F1;
     margin: 0;
     font-size: 35px;
 }
