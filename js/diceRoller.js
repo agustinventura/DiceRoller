@@ -93,29 +93,29 @@ function decreaseSides() {
     switch (sides) {
         case 6:
             sides = 4;
-            $("#increaseSidesText").text("6");
+            $("#increaseSidesText").html("6&gt;");
             $(".left-arrow").hide();
             $("#decreaseSidesText").hide();
             break;
         case 8:
             sides = 6;
-            $("#increaseSidesText").text("8");
-            $("#decreaseSidesText").text("4");
+            $("#increaseSidesText").html("8&gt;");
+            $("#decreaseSidesText").html("&lt;4");
             break;
         case 10:
             sides = 8;
-            $("#increaseSidesText").text("10");
-            $("#decreaseSidesText").text("6");
+            $("#increaseSidesText").html("10&gt;");
+            $("#decreaseSidesText").html("&lt;6");
             break;
         case 12:
             sides = 10;
-            $("#increaseSidesText").text("12");
-            $("#decreaseSidesText").text("8");
+            $("#increaseSidesText").html("12&gt;");
+            $("#decreaseSidesText").html("&lt;8");
             break;
         case 20:
             sides = 12;
-            $("#increaseSidesText").text("20");
-            $("#decreaseSidesText").text("10");
+            $("#increaseSidesText").html("20&gt;");
+            $("#decreaseSidesText").html("&lt;10");
             $("#increaseSidesText").show();
             $(".right-arrow").show();
             break;
@@ -129,31 +129,31 @@ function increaseSides() {
     switch (sides) {
         case 4:
             sides = 6;
-            $("#increaseSidesText").text("8");
-            $("#decreaseSidesText").text("4");
+            $("#increaseSidesText").html("8&gt;");
+            $("#decreaseSidesText").html("&lt;4");
             $(".left-arrow").show();
             $("#decreaseSidesText").show();
             break;
         case 6:
             sides = 8;
-            $("#increaseSidesText").text("10");
-            $("#decreaseSidesText").text("6");
+            $("#increaseSidesText").html("10&gt;");
+            $("#decreaseSidesText").html("&lt;6");
             break;
         case 8:
             sides = 10;
-            $("#increaseSidesText").text("12");
-            $("#decreaseSidesText").text("8");
+            $("#increaseSidesText").html("12&gt;");
+            $("#decreaseSidesText").html("&lt;8");
             break;
         case 10:
             sides = 12;
-            $("#increaseSidesText").text("20");
-            $("#decreaseSidesText").text("10");
+            $("#increaseSidesText").html("20&gt;");
+            $("#decreaseSidesText").html("&lt;10");
             break;
         case 12:
             sides = 20;
             $("#increaseSidesText").hide();
             $(".right-arrow").hide();
-            $("#decreaseSidesText").text("12");
+            $("#decreaseSidesText").html("&lt;12");
             break;
         default:
             break;

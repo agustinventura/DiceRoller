@@ -11,7 +11,7 @@
 
 .ui-header {
 	color: #ECF0F1;
-    background-color: #2C3E50;
+    background-color: #E74C3C;
     width: 100%;
 }
 
@@ -45,37 +45,37 @@
 }
 
 .ui-btn {
-    background-color: #EF003D;
+    background-color: #3498DB;
     color: #F1F8F8;
     font-weight: bold;
 }
 
 a.ui-btn:active:hover,
 .ui-btn:enabled:active:hover {
-    background-color: #D7073C
+    background-color: #2980B9;
 }
 
 .ui-page .ui-footer.ui-bottom-button .ui-btn {
-	background-color: #EF003D;
+	background-color: #2980B9;
 }
 
 .ui-btn:enabled:focus {
-    background-color: #D7073C;
+    background-color: #2980B9;
 }
 
-.ui-popup {
-    border: 3px solid #EF003D;
-}
+/*.ui-popup {
+    border: 3px solid #2980B9;;
+}*/
 
 .ui-popup .ui-popup-header {
-    background-color: #7F9070;
-    color: #F1F8F8;
+    background-color: #ECF0F1;
+    color: #2C3E50;
 }
 
 .ui-popup .ui-popup-content {
-    background-color: #F1F8F8;
+    background-color: #ECF0F1;
     font-weight: bolder;
-    color: #7F9070;
+    color: #2C3E50;
     padding-top: 60px;
 }
 
@@ -84,15 +84,15 @@ a.ui-btn:active:hover,
 }
 
 .ui-popup .ui-popup-footer.ui-side-button .ui-btn:nth-child(n) {
-	background-color: #EF003D;
+	background-color: #3498DB;
 }
 
 .ui-popup .ui-popup-footer.ui-side-button .ui-btn:nth-child(n):active {
-	background-color: #D7073C;
+	background-color: #2980B9;
 }
 
 .ui-popup .ui-popup-footer.ui-side-button .ui-btn:nth-child(n)::after {
-    background-color: #D7073C;
+    background-color: #2980B9;
     -webkit-transition: opacity 250ms;
     -moz-transition: opacity 250ms;
     -o-transition: opacity 250ms;
@@ -102,21 +102,21 @@ a.ui-btn:active:hover,
     z-index: -1;
 }
 
-.btn-icon-cancel {
-    background: url(../img/cancel.png) no-repeat 50% 50%;
+.btn-icon-again {
+    background: url(../img/again.png) no-repeat 50% 50%;
 }
 
-.btn-icon-ok {
-    background: url(../img/ok.png) no-repeat 50% 50%;
+.btn-icon-start {
+    background: url(../img/start.png) no-repeat 50% 50%;
 }
 
 body {
-    color: #7F9070;
+    color: #2C3E50;
     text-align: center;
 }
 
 .ui-listview li {
-	color: #7F9070;
+	color: #2C3E50;
 	margin: 0;
 	font-weight: bold;
 }
