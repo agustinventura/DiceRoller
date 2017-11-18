@@ -30,7 +30,7 @@ function init() {
     $("#beginning").click(function () {
         goDices();
     });
-    document.addEventListener('rotarydetent', function (ev) {
+    $(document).on('rotarydetent', function (ev) {
         dicesRotaryControl(ev);
     });
     $("#menu").click(function () {
@@ -162,7 +162,8 @@ function increaseSides() {
 }
 
 function dicesSet() {
-    document.addEventListener('rotarydetent', function (ev) {
+	$(document).off('rotarydetent');
+	$(document).on('rotarydetent', function (ev) {
         sidesRotaryControl(ev);
     });
     $("#sides").text(sides);
@@ -171,7 +172,7 @@ function dicesSet() {
 
 function sidesSet() {
     roll();
-    showThrows();
+    showRolls();
     tau.changePage("#resultsPage");
 }
 
@@ -183,7 +184,7 @@ function roll() {
     }
 }
 
-function showThrows() {
+function showRolls() {
 	$(".ui-listview").empty();
     for (i = 0; i < results.length; i++) {
         $(".ui-listview").append("<li>" + results[i] + "</li>");
@@ -194,13 +195,15 @@ function rollAgain() {
     $(".ui-listview").empty();
     tau.closePopup();
     roll();
-    showThrows();
+    showRolls();
 }
 
 function goDices() {
     tau.closePopup();
-    dices = 1;
-    sides = 6;
+    $(document).off('rotarydetent');
+    $(document).on('rotarydetent', function (ev) {
+        dicesRotaryControl(ev);
+    });
     tau.changePage("#dicesPage");
 }
 
