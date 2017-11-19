@@ -1,6 +1,7 @@
 var dices = 1;
 var sides = 6;
 var results = [];
+var diceRollSound = null;
 
 function init() {
     $("#dices").text(dices);
@@ -38,6 +39,7 @@ function init() {
     });
     window.addEventListener( 'tizenhwkey', function( ev ) {
 		if( ev.keyName === "back" ) {
+			diceRollSound = null;
 			var activePageId = tau.activePage.id;
 			if( activePageId === "dicesPage" ) {
 				try {
@@ -171,6 +173,7 @@ function dicesSet() {
 }
 
 function sidesSet() {
+	loadDiceRollSound();
     roll();
     showRolls();
     tau.changePage("#resultsPage");
@@ -185,14 +188,24 @@ function roll() {
 }
 
 function showRolls() {
-	$(".ui-listview").empty();
+	diceRollSound.load();
+    diceRollSound.play();
+	$(".rolls").empty();
+	var row = $('<tr></tr>');
     for (i = 0; i < results.length; i++) {
-        $(".ui-listview").append("<li>" + results[i] + "</li>");
+    	if (i%3 === 0) {
+    		var row = $('<tr></tr>');
+    		$(".rolls").append(row);
+    	}
+        row.append('<td><div class="diceBackground">' + results[i] + '</div></td>');
     }
+    $(".rolls").append(row);
 }
 
 function rollAgain() {
-    $(".ui-listview").empty();
+	diceRollSound = null;
+	loadDiceRollSound();
+    $(".rolls").empty();
     tau.closePopup();
     roll();
     showRolls();
@@ -204,11 +217,18 @@ function goDices() {
     $(document).on('rotarydetent', function (ev) {
         dicesRotaryControl(ev);
     });
+    diceRollSound = null;
     tau.changePage("#dicesPage");
 }
 
 function showMenu() {
     tau.openPopup("#menuPopup");
+}
+
+function loadDiceRollSound() {
+	    diceRollSound = document.createElement('audio');
+	    diceRollSound.src = 'snd/shake-roll.mp3';
+	    diceRollSound.name = 'shake and roll';
 }
 
 $(document).ready(function () {
