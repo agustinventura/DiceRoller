@@ -197,7 +197,7 @@ function showRolls() {
     		var row = $('<tr></tr>');
     		$(".rolls").append(row);
     	}
-        row.append('<td><div class="diceBackground">' + results[i] + '</div></td>');
+        row.append('<td class="d' + sides + 'Background">' + results[i] + '</td>');
     }
     $(".rolls").append(row);
 }

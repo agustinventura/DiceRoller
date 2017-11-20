@@ -119,13 +119,33 @@ body {
 }
 
 .rolls td {
-    padding: 5px;
+    width: 33%;
+    font-size: 30px;
+	height: 70px;
 }
 
-.diceBackground {
-	background: url(../img/d4.png) no-repeat;
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    padding-top: 6px;
+.d4Background {
+    background: url(../img/d4.png) no-repeat 50% 20%;
+}
+
+.d6Background {
+    background: url(../img/d6.png) no-repeat 50% 50%;
+}
+
+.d8Background {
+    background: url(../img/d4.png) no-repeat 50% 20%;
+}
+
+.d10Background {
+    background: url(../img/d10.png) no-repeat 50% 50%;
+	    padding-top: 25px;
+}
+
+.d12Background {
+    background: url(../img/d12.png) no-repeat 50% 40%;
+}
+
+.d20Background {
+    background: url(../img/d20.png) no-repeat 50%;
+	padding-top: 25px;
 }
