@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns:tizen="http://tizen.org/ns/widgets" xmlns="http://www.w3.org/ns/widgets" id="http://yourdomain/DiceRoller" version="1.0.0" viewmodes="maximized">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://www.digitalsingular.com/DiceRoller" version="1.0.0" viewmodes="maximized">
     <tizen:application id="Pb8g35Tqoq.DiceRoller" package="Pb8g35Tqoq" required_version="2.3.2"/>
+    <author href="www.digitalsingular.com" email="agustinventura@gmail.com">Agustín Ventura</author>
     <content src="index.html"/>
+    <description>DiceRoller te permite tirar el número de dados que desees de cuatro, seis, ocho, diez, doce o veinte caras.
+Podrás repetir la tirada pulsando un botón o volver al principio.
+Además escucharás el sonido de la tirada y verás en cada tipo de dado su cara.</description>
+    <description xml:lang="es-es">DiceRoller te permite tirar el número de dados que desees de cuatro, seis, ocho, diez, doce o veinte caras.
+Podrás repetir la tirada pulsando un botón o volver al principio.
+Además escucharás el sonido de la tirada y verás en cada tipo de dado su cara.</description>
     <feature name="http://tizen.org/feature/screen.size.normal"/>
     <icon src="icon.png"/>
     <name>DiceRoller</name>
+    <name xml:lang="es-es">DiceRoller</name>
     <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
     <tizen:profile name="wearable"/>
     <tizen:setting hwkey-event="enable"/>

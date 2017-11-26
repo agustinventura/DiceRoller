@@ -7,6 +7,11 @@
 */
 .ui-content {
     background-color: #ECF0F1;
+    padding-bottom: 20px;
+}
+
+.ui-content.content-padding.rollsPage {
+	padding-bottom: 120px;
 }
 
 .ui-header {
@@ -21,18 +26,25 @@
     font-size: 35px;
 }
 
-.increase {
-	padding-right: 50px;
-    padding-top: 50px;
-    float: right;
-    font-size: 30px;
+.headerTable {
+	width: 100%;
 }
 
-.decrease {
-	padding-left: 50px;
-    padding-top: 50px;
-    float: left;
-    font-size: 30px;
+.leftCell {
+	width: 28%;
+	text-align: right;
+	margin: 0;
+}
+
+.centerCell {
+	width: 44%;
+	margin: 0;
+}
+
+.rightCell {
+	width: 38%;
+	text-align: left;
+	margin: 0;
 }
 
 .description {
@@ -76,7 +88,7 @@ a.ui-btn:active:hover,
 }
 
 .ui-popup.ui-scroll-on:not(.ui-ctxpopup):not(.ui-popup-toast) .ui-popup-header+.ui-popup-content {
-	padding: 30px 64px 100px 64px;
+	padding: 30px 64px 120px 64px;
 }
 
 .ui-popup .ui-popup-footer.ui-side-button .ui-btn:nth-child(n) {

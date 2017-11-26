@@ -5,8 +5,7 @@ var diceRollSound = null;
 
 function init() {
     $("#dices").text(dices);
-    $(".left-arrow").hide();
-    $("#decreaseDicesText").hide();
+    $("#decreaseDices").html("&nbsp;&nbsp;&nbsp;");
     $("#setDices").click(function () {
         dicesSet();
     });
@@ -46,7 +45,18 @@ function init() {
 					tizen.application.getCurrentApplication().exit();
 				} catch (ignore) {
 				}
-			} else {
+			} else if (activePageId === "sidesPage") {
+				$(document).off('rotarydetent');
+			    $(document).on('rotarydetent', function (ev) {
+			        dicesRotaryControl(ev);
+			    });
+			    diceRollSound = null;
+				window.history.back();
+			} else if (activePageId === "resultsPage") {
+				$(document).off('rotarydetent');
+				$(document).on('rotarydetent', function (ev) {
+			        sidesRotaryControl(ev);
+			    });
 				window.history.back();
 			}
 		}
@@ -77,15 +87,13 @@ function decreaseDices() {
         $("#dices").text(dices);
     }
     if (dices == 1) {
-        $(".left-arrow").hide();
-        $("#decreaseDicesText").hide();
+        $("#decreaseDices").html("&nbsp;&nbsp;&nbsp;");
     }
 }
 
 function increaseDices() {
     if (dices == 1) {
-        $(".left-arrow").show();
-        $("#decreaseDicesText").show();
+        $("#decreaseDices").html("<");
     }
     dices++;
     $("#dices").text(dices);
@@ -96,7 +104,6 @@ function decreaseSides() {
         case 6:
             sides = 4;
             $("#increaseSidesText").html("6&gt;");
-            $(".left-arrow").hide();
             $("#decreaseSidesText").hide();
             break;
         case 8:
@@ -119,7 +126,6 @@ function decreaseSides() {
             $("#increaseSidesText").html("20&gt;");
             $("#decreaseSidesText").html("&lt;10");
             $("#increaseSidesText").show();
-            $(".right-arrow").show();
             break;
         default:
             break;
@@ -133,7 +139,6 @@ function increaseSides() {
             sides = 6;
             $("#increaseSidesText").html("8&gt;");
             $("#decreaseSidesText").html("&lt;4");
-            $(".left-arrow").show();
             $("#decreaseSidesText").show();
             break;
         case 6:
@@ -154,7 +159,6 @@ function increaseSides() {
         case 12:
             sides = 20;
             $("#increaseSidesText").hide();
-            $(".right-arrow").hide();
             $("#decreaseSidesText").html("&lt;12");
             break;
         default:
@@ -173,6 +177,7 @@ function dicesSet() {
 }
 
 function sidesSet() {
+	$(document).off('rotarydetent');
 	loadDiceRollSound();
     roll();
     showRolls();

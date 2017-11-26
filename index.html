@@ -15,9 +15,13 @@
 <body>
 	<div class="ui-page ui-page-active" id="dicesPage">
 		<header class="ui-header">
-			<div id="decreaseDices" class="decrease">&lt;</div>
-			<div id="increaseDices" class="increase">&gt;</div>
-			<h2 class="ui-title">Dados</h2>
+			<table class="headerTable">
+				<tr>
+					<td class="leftCell"><div id="decreaseDices" class="decrease">&lt;</div></td>
+					<td class="centerCell"><h2 class="ui-title">Dados</h2></td>
+					<td class="rightCell"><div id="increaseDices" class="increase">&gt;</div></td>
+				</tr>
+			</table>
 		</header>
 		<div class="ui-content content-padding">
 			<p class="description">&iquest;Cu&aacute;ntos dados quieres
@@ -50,7 +54,7 @@
 		<header class="ui-header">
 			<h2 class="ui-title">Resultados</h2>
 		</header>
-		<div class="ui-content content-padding">
+		<div class="ui-content content-padding rollsPage">
 			<table class="rolls">
 			</table>
 		</div>
