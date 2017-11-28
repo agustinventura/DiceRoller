@@ -10,10 +10,6 @@
     padding-bottom: 20px;
 }
 
-.ui-content.content-padding.rollsPage {
-	padding-bottom: 120px;
-}
-
 .ui-header {
 	color: #ECF0F1;
     background-color: #E74C3C;
@@ -34,6 +30,7 @@
 	width: 28%;
 	text-align: right;
 	margin: 0;
+	padding-top: 50px;
 }
 
 .centerCell {
@@ -45,6 +42,7 @@
 	width: 38%;
 	text-align: left;
 	margin: 0;
+	padding-top: 50px;
 }
 
 .description {
