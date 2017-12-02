@@ -178,6 +178,9 @@ function dicesSet() {
 
 function sidesSet() {
 	$(document).off('rotarydetent');
+	$(document).on('rotarydetent', function (ev) {
+        rollAgain();
+    });
 	if (dices < 4) {
 		$(".rollsPage").css('paddingBottom', '120px');
 	}
